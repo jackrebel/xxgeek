@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-cn" class="screen-desktop-wide device-desktop"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>极客导航&nbsp;- 超简洁的多网址导航</title>
+    <meta name="keywords" content="极客聚盒搜索,网址导航,工作导航,自定义导航,简洁导航,网站大全">
+    <meta name="description" content="极客聚盒搜索是一个超简洁的网址导航，为广大用户提供高效率的上网导航服务。">
+<!-- zui -->
+<link rel="shortcut icon" type="image/x-icon" href="//www.xxGeek.com/favicon.ico">
+<link href="/static/zui.min.css" rel="stylesheet">
+<link href="/static/font-awesome.min.css" rel="stylesheet">
+<link href="/static/index-style.css" rel="stylesheet">
+<link href="/static/layer.css" id="layuicss-skinlayercss" rel="stylesheet">
+<script src="//static/md5.js"></script>
+</head>
+<body style="">
+
+<link rel="stylesheet" type="text/css" href="/static/cleanslate.min.css">
+<link rel="stylesheet" type="text/css" href="/static/style.css">
+<!-- template start -->
+    <!--[if lt IE 8]>
+    <div class="alert alert-danger">您正在使用 <strong>过时的</strong> 浏览器. 是时候 <a href="//browsehappy.com/">更换一个更好的浏览器</a> 来提升用户体验.</div>
+    <![endif]-->
+    <!--头部导航条-->
+    <header>
+      <div class="main">
+  <div class="logo">
+    <a href="/"  alt="xxGeek导航" title="xxGeek导航">
+      <img src="/static/logo.png">
+      <span></span>
+    </a>
+  </div>
+  <nav class="nav" >
+    <ul>
+	<li><a href="sethome.html">帮助</a></li>
+	<li><a href="https://support.qq.com/product/106421" target="_blank">网站提交</a></li>
+    </ul>
+  </nav>
+  <div class="user visible-lg">    
+<div id="ajaxElement_1_993_loading" style="display: block;"></div>
+<div id="ajaxElement_1_993_success" style="display: none"></div>
+  </div>
+  <div class="head-btn visible-lg">
+    <a href="/sethome.html" target="_blank" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="设为首页"><i class="fa fa-home"></i></a>
+    <a href="javascript:;" class="customize" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="自定义模式"><i class="fa fa-cog"></i></a>
+    <a href="javascript:;" class="theme" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="更换主题"><i class="fa fa-image"></i></a>
+  </div>
+  <button class="nav-btn visible-xs visible-sm">
+    <span class="icon-line top"></span>
+    <span class="icon-line middle"></span>
+    <span class="icon-line bottom"></span>
+  </button>
+  <div class="mobile-user visible-xs visible-sm">
+<div id="ajaxElement_2_160_loading" style="display: block;"></div>
+<div id="ajaxElement_2_160_success" style="display: none"></div>
+  </div>
+  <div id="tow-nav" style="display: none;"></div>
+</div>
+      <div class="not_operational">
+        <!--自定义模式-->
+        <div class="customize-mode-tips">
+          <div class="customize-switch">
+            <a href="javascript:;" class="close-customize"><i class="fa fa-times-circle" aria-hidden="true"></i>退 出</a>
+          </div>
+        </div>
+        <div class="customize-mode-panel">
+          <h4>自 / 定 / 义 / 模 / 式</h4>
+          <ul class="customize-mode-ul">
+            <li id="local-save">保 存 配 置</li>
+            <li id="restore-data">恢 复 默 认</li>
+            <li id="set-title">隐 藏 标 题</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div id="content" class="default-bg">
+      <!--内容-->
+      <div class="main-index">
+        <div class="container content-box">
+          <section class="sousuo">
+  <div class="search">
+    <div class="search-box">
+      <span class="search-icon" style="background: url(&quot;/images/search_icon.png&quot;) -40px -280px; opacity: 1;"></span>
+      <input type="text" id="txt" class="search-input" placeholder="请输入关键字，按回车 / Enter 搜索">
+      <button class="search-btn" id="search-btn"><i class="fa fa-search"></i></button>
+    </div>
+    <!-- 搜索热词 -->
+    <div class="box search-hot-text" id="box" style="display: none">
+      <ul></ul>
+    </div>
+    <!-- 搜索引擎 -->
+    <div class="search-engine" style="display: none;">
+      <div class="search-engine-head">
+        <strong class="search-engine-tit">选择您的默认搜索引擎：</strong>
+        <div class="search-engine-tool">搜索热词： <span id="hot-btn"></span></div>
+        <div class="search-engine-tool" style="padding-right:5px">新窗口： <span id="newwindow-btn"></span></div>
+      </div>
+      <ul class="search-engine-list"></ul>
+    </div>   
+  </div>
+</section>
+<section class="link-list-item" id="link-list-item" style="opacity: 1;">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-4 col-sm-6 i-link-box" style="display: block;"><div class="row">
+<div class="col-xs-12"><strong class="link-list-tit" id="">常用 · 工作</strong><input class="edit-category"></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl00_967" target="_blank" href="//translate.google.cn/">Google 翻译</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl01_966" target="_blank" href="//index.baidu.com/">百度指数</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl02_965" target="_blank" href="//pan.baidu.com/">百度网盘</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl03_964" target="_blank" href="//dict.youdao.com/">有道词典</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl04_963" target="_blank" href="//www.yinxiang.com/">印象笔记</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl05_962" target="_blank" href="//mail.qq.com/">QQ邮箱</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl06_961" target="_blank" href="//wx.qq.com/">网页版微信</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl07_960" target="_blank" href="//cn.bing.com/">必应</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl08_959" target="_blank" href="//www.baidu.com/">百度</a></div>
+</div></div>
+<div class="col-md-4 col-sm-6 i-link-box" style="display: block;"><div class="row">
+<div class="col-xs-12"><strong class="link-list-tit" id="">常用 · 社交</strong><input class="edit-category"></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl00_968" target="_blank" href="//weibo.com/">微博</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl01_970" target="_blank" href="//www.zhihu.com/">知乎</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl02_973" target="_blank" href="//www.douban.com/">豆瓣</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl03_972" target="_blank" href="//tieba.baidu.com/index.html">百度贴吧</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl04_969" target="_blank" href="//qzone.qq.com/">QQ空间</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl05_971" target="_blank" href="//www.jianshu.com/">简书</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl06_976" target="_blank" href="//www.guokr.com/">果壳</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl07_975" target="_blank" href="//www.v2ex.com/">V2EX</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl08_974" target="_blank" href="//www.hupu.com/">虎扑</a></div>
+</div></div>
+<div class="col-md-4 col-sm-6 i-link-box" style="display: block;"><div class="row">
+<div class="col-xs-12"><strong class="link-list-tit" id="">常用 · 生活</strong><input class="edit-category"></div>
+<div class="col-xs-4"><a class="link-list-a good" id="ctl03_1027" target="_blank" href="//www.8kmm.com/">八千导航</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl00_985" target="_blank" href="//www.qyer.com/">穷游</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl01_984" target="_blank" href="//www.ctrip.com/">携程</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl02_983" target="_blank" href="//www.qunar.com/">去哪儿</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl03_982" target="_blank" href="//ganji.com/">赶集网</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl04_981" target="_blank" href="//58.com/">58同城</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl05_980" target="_blank" href="//www.ele.me/">饿了么</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl07_978" target="_blank" href="//www.dianping.com/">大众点评</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl08_977" target="_blank" href="//gz.meituan.com/">美团</a></div>
+</div></div>
+<div class="col-md-4 col-sm-6 i-link-box" style="display: block;"><div class="row">
+<div class="col-xs-12"><strong class="link-list-tit" id="">视频 · 音乐</strong><input class="edit-category"></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl00_991" target="_blank" href="//music.163.com/">网易云音乐</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl01_992" target="_blank" href="//y.qq.com/">QQ音乐</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl03_993" target="_blank" href="//wxtv.net/vip/">VIP视频解析</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl04_990" target="_blank" href="//www.bilibili.com/">哔哩哔哩</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl02_994" target="_blank" href="//www.wxtv.net/">无限影视</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl05_989" target="_blank" href="//v.qq.com/">腾讯视频</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl06_988" target="_blank" href="//tv.sohu.com/">搜狐视频</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl07_987" target="_blank" href="//www.iqiyi.com/">爱奇艺</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl08_986" target="_blank" href="//www.youku.com/">优酷</a></div>
+</div></div>
+<div class="col-md-4 col-sm-6 i-link-box" style="display: block;"><div class="row">
+<div class="col-xs-12"><strong class="link-list-tit" id="">消费 · 购物</strong><input class="edit-category"></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl00_995" target="_blank" href="//www.taobao.com/">淘宝</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl01_996" target="_blank" href="//www.tmall.com/">天猫</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl02_997" target="_blank" href="//www.jd.com/">京东</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl03_1003" target="_blank" href="//1688.com/">1688</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl04_1002" target="_blank" href="//www.mi.com/">小米网</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl05_1001" target="_blank" href="//www.yhd.com/">一号店</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl06_1000" target="_blank" href="//www.vip.com/">唯品会</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl07_999" target="_blank" href="//www.dangdang.com/">当当</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl08_998" target="_blank" href="//z.cn/">亚马逊</a></div>
+</div></div>
+<div class="col-md-4 col-sm-6 i-link-box" style="display: block;"><div class="row">
+<div class="col-xs-12"><strong class="link-list-tit" id="">资讯 · 新闻</strong><input class="edit-category"></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl00_1012" target="_blank" href="//www.qdaily.com/">好奇日报</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl01_1011" target="_blank" href="//www.toutiao.com">今日头条</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl02_1010" target="_blank" href="//www.autohome.com.cn/">汽车之家</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl03_1009" target="_blank" href="//www.people.com.cn/">人民网</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl04_1008" target="_blank" href="//www.sohu.com/">搜狐</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl05_1007" target="_blank" href="//www.163.com/">网易</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl06_1006" target="_blank" href="//news.baidu.com/">百度新闻</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl07_1005" target="_blank" href="//news.qq.com/">腾讯</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl08_1004" target="_blank" href="//www.sina.com.cn/">新浪</a></div>
+</div></div>
+<div class="col-md-4 col-sm-6 i-link-box" style="display: block;"><div class="row">
+<div class="col-xs-12"><strong class="link-list-tit" id="">工作 · 求职</strong><input class="edit-category"></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl00_1021" target="_blank" href="//www.51job.com/">前程无忧</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl01_1020" target="_blank" href="//www.zhaopin.com/">智联招聘</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl02_1019" target="_blank" href="//cv.qiaobutang.com/">乔布堂</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl03_1018" target="_blank" href="//www.jianzhimao.com/">兼职猫</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl04_1017" target="_blank" href="//job.csdn.net/">庞果网</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl05_1016" target="_blank" href="//www.neitui.me/">内推网</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl06_1015" target="_blank" href="//www.dajie.com/">大街</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl07_1014" target="_blank" href="//www.liepin.com/">猎聘</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl08_1013" target="_blank" href="//www.lagou.com/">拉勾</a></div>
+</div></div>
+<div class="col-md-4 col-sm-6 i-link-box" style="display: block;"><div class="row">
+<div class="col-xs-12"><strong class="link-list-tit" id="">娱乐 · 游戏</strong><input class="edit-category"></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl00_1030" target="_blank" href="//bbs.ngacn.cc/">NGA</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl01_1029" target="_blank" href="//www.3dmgame.com/">3DM</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl02_1028" target="_blank" href="//www.gamersky.com/">游民星空</a></div>
+<div class="col-xs-4"><a class="link-list-a good" id="ctl03_1027" target="_blank" href="//www.8kmm.com/">八千导航</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl04_1026" target="_blank" href="//www.178.com/">178</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl05_1025" target="_blank" href="//www.4399.com/">4399</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl06_1024" target="_blank" href="//www.tgbus.com/">电玩巴士</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl07_1023" target="_blank" href="//www.17173.com/">17173</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl08_1022" target="_blank" href="//www.duowan.com/">多玩</a></div>
+</div></div>
+<div class="col-md-4 col-sm-6 i-link-box" style="display: block;"><div class="row">
+<div class="col-xs-12"><strong class="link-list-tit" id="">金融 · 银行</strong><input class="edit-category"></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl00_1039" target="_blank" href="//bank.pingan.com/">平安银行</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl01_1038" target="_blank" href="//www.cmbc.com.cn/">民生银行</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl02_1037" target="_blank" href="//www.cgbchina.com.cn/">广发银行</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl03_1036" target="_blank" href="//www.bankcomm.com/BankCommSite/default.shtml">交通银行</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl04_1035" target="_blank" href="//www.boc.cn/">中国银行</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl05_1034" target="_blank" href="//www.abchina.com/cn/">农业银行</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl06_1033" target="_blank" href="//www.ccb.com/cn/home/indexv3.html">建设银行</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl07_1032" target="_blank" href="//www.icbc.com.cn/icbc/">工商银行</a></div>
+<div class="col-xs-4"><a class="link-list-a" id="ctl08_1031" target="_blank" href="//www.cmbchina.com/">招商银行</a></div>
+</div></div>
+</div>
+</div>
+</section>
+</div>
+        <!-- 对话框HTML -->
+        <div class="modal fade" id="myModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span></button>
+<h4 class="modal-title"><i class="fa fa-pencil"></i>自定义链接</h4>
+</div>
+<div class="modal-body">
+<div class="input-control has-icon-left">
+  <input id="inputAccountExample1" type="text" class="form-control" placeholder="网址名称">
+  <label for="inputAccountExample1" class="input-control-icon-left"><i class="fa fa-font"></i></label>
+</div>
+<div class="input-control has-icon-left" style="margin-top: 15px">
+  <input id="inputAccountExample2" type="text" class="form-control" placeholder="请输入网址，注意网址前面要加上//">
+  <label for="inputAccountExample1" class="input-control-icon-left"><i class="fa fa-link"></i></label>
+</div>
+<div class="modal-text">
+  <p class="text-red">链接格式：//xxx.com、//xxx.com</p>
+  <p><i class="fa fa-info-circle"></i>本地保存数据是临时存储在本地电脑上，数据丢失无法找回；若需永久储存数据，请使用云端保存</p>
+</div>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">取 消</button>
+<button type="button" class="btn btn-primary" data-dismiss="modal">确 定</button>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>      
+      <!--主题面板-->
+      <div class="theme-panel">
+        <div class="theme-panel-bg">
+          <div class="theme-panel-header">
+            <div class="theme-panel-type pull-left">选择皮肤</div>
+            <div class="dialog-control pull-right"><i class="fa fa-close" id="cancel-x"></i></div>
+          </div>
+<div class="theme-panel-content">
+<ul class="wrapper-one">
+<li class="active"><img src="/static/default-bg.png"><p>默认主题</p><i class="fa fa-check-circle-o"></i></li>
+<li><img src="/static/bg1-bg.jpg"><p>护眼小花朵</p><i class="fa fa-check-circle-o"></i></li>
+<li><img src="/static/bg2-bg.jpg"><p>自由女神像</p><i class="fa fa-check-circle-o"></i> </li>
+<li><img src="/static/bg3-bg.jpg"><p>暖色雪山</p><i class="fa fa-check-circle-o"></i></li>
+<li><img src="/static/bg4-bg.jpg"><p>绿色高原</p><i class="fa fa-check-circle-o"></i></li>
+<li><img src="/static/bg5-bg.jpg">
+<p>卡通萝莉</p><i class="fa fa-check-circle-o"></i></li>
+<li><img src="/static/bg6-bg.jpg"><p>淡蓝雪山</p><i class="fa fa-check-circle-o"></i></li>
+<li><img src="/static/bg7-bg.jpg"><p>纯蓝天空</p><i class="fa fa-check-circle-o"></i></li>
+</ul>
+<ul class="wrapper-two">
+<li><img src="/static/auto_bg.png"><p>随机皮肤</p><i class="fa fa-check-circle-o"></i></li>
+<li><img src="/static/diy_bg.jpg"><p>自定义皮肤</p><i class="fa fa-check-circle-o"></i></li>
+</ul>
+<div class="color-panel">
+<div class="color-panel-tips">
+<strong>自定义皮肤配置<a href="#" target="_blank" title="自定义皮肤使用教程" style="color:#ffc107; margin-left: 10px;"><i class="fa fa-question-circle"></i></a></strong>
+<div class="color-panel-diy">
+  <div class="image-url">图片地址：<input type="text"></div>
+  标题颜色：<input type="text" id="title-color">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文字颜色：<input type="text" id="text-color">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;背景颜色：<input type="text" id="bg-color">
+</div>
+</div>
+</div>
+</div>
+        </div>
+        <div class="theme-panel-muen">
+          <button class="btn btn-lg" type="button" id="okay">保 存</button><button class="btn btn-lg" type="button" id="cancel">取 消</button>
+        </div>
+      </div>
+    </div>
+	
+	
+    <!--[if lt IE 9]>
+    <script src="dist/lib/ieonly/html5shiv.js"></script>
+    <script src="dist/lib/ieonly/respond.js"></script>
+    <![endif]-->
+    <!-- jQuery (ZUI中的Javascript组件依赖于jQuery) -->
+    <!-- ZUI Javascript组件 -->
+    <script src="/static/jquery.js"></script>
+    <script src="/static/zui.js"></script>
+    <script src="/static/index.min.js"></script>
+  
+  <div style="display:none"><script type="text/javascript" src="//v1.cnzz.com/z_stat.php?id=1278252612&web_id=1278252612"></script></div>
+</body></html>
